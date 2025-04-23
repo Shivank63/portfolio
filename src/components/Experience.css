@@ -1,0 +1,103 @@
+.experience {
+    background-color: var(--background-alt);
+  }
+  
+  .timeline {
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+  }
+  
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+  
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #d8b4fe;
+    display: none;
+  }
+  
+  .timeline-item:not(:last-child)::before {
+    display: block;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline-dot i {
+    width: 0.75rem;
+    height: 0.75rem;
+    color: white;
+  }
+  
+  .timeline-content {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .timeline-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-header h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .timeline-period {
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  .timeline-period i {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+  }
+  
+  .timeline-company {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .timeline-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .timeline-period {
+      margin-top: 0;
+    }
+  }
+  
