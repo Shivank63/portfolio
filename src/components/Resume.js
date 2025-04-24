@@ -1,6 +1,21 @@
-import "./Resume.css"
+import "./Resume.css";
 
 function Resume() {
+  const handleDownloadAndPreview = () => {
+    const fileUrl = "/Shivank-Resume.pdf";
+
+    // Trigger file download
+    const downloadLink = document.createElement("a");
+    downloadLink.href = fileUrl;
+    downloadLink.download = "Shivank-Resume.pdf";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+
+    // Open in new tab for preview
+    window.open(fileUrl, "_blank");
+  };
+
   return (
     <section id="resume" className="resume">
       <div className="container">
@@ -13,49 +28,20 @@ function Resume() {
           </p>
 
           <div className="resume-buttons">
-            <button className="download-button">
+            <button onClick={handleDownloadAndPreview} className="download-button">
               <i className="icon-download"></i>
               Download CV
             </button>
 
-            <button className="preview-button">
+            <a href="/Shivank_Verma_resume.pdf" target="_blank" rel="noopener noreferrer" className="preview-button">
               <i className="icon-eye"></i>
               Preview CV
-            </button>
-          </div>
-
-          {/* Resume Preview (Optional) */}
-          <div className="resume-preview">
-            <h3>Resume Highlights</h3>
-
-            <div className="resume-highlights">
-              <div className="highlight-section">
-                <h4>Key Skills</h4>
-                <ul>
-                  <li>Frontend Development (React, JavaScript)</li>
-                  <li>Responsive Web Design</li>
-                  <li>UI/UX Design Principles</li>
-                  <li>Performance Optimization</li>
-                  <li>Accessibility (WCAG)</li>
-                </ul>
-              </div>
-
-              <div className="highlight-section">
-                <h4>Achievements</h4>
-                <ul>
-                  <li>Reduced load time by 40% on main product</li>
-                  <li>Led team of 5 developers on key project</li>
-                  <li>Implemented CI/CD pipeline for faster deployments</li>
-                  <li>Speaker at React Conference 2022</li>
-                  <li>Open source contributor</li>
-                </ul>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Resume
+export default Resume;

@@ -2,43 +2,20 @@ import "./Experience.css"
 
 const experiences = [
   {
-    title: "Senior Frontend Developer",
-    company: "Tech Innovations Inc.",
-    period: "2021 - Present",
-    description:
-      "Led the development of the company's flagship product using React and Next.js. Implemented responsive designs, improved performance, and mentored junior developers.",
-    type: "work",
-  },
-  {
-    title: "Frontend Developer",
-    company: "Digital Solutions Ltd.",
-    period: "2018 - 2021",
-    description:
-      "Developed and maintained multiple client websites. Worked with React, Vue.js, and various CSS frameworks to create responsive and accessible web applications.",
-    type: "work",
-  },
-  {
     title: "Web Development Intern",
-    company: "StartUp Hub",
-    period: "2017 - 2018",
-    description:
-      "Assisted in the development of web applications. Gained hands-on experience with HTML, CSS, JavaScript, and modern frontend frameworks.",
+    company: "Soltioneers Infotech PVT LTD",
+    period: "Oct 2024 -March 2025",
+    description: `
+    Gained hands-on experience as a Web Development Intern at Soltioneers Infotech PVT LTD, working on real-world projects with the MERN stack.
+     Contributed to a MERN stack project, developing both frontend and backend features.
+     Built user-friendly interfaces using React.js, HTML, CSS, and Tailwind CSS.
+     Developed backend APIs and database schemas using Node.js, Express.js, and MongoDB.
+    Integrated third-party RESTful APIs using Axios and React Query for efficient data management.
+    Collaborated with the development team using Git and participated in daily stand-ups.
+  `,
+  
+  
     type: "work",
-  },
-  {
-    title: "Master's in Computer Science",
-    company: "Tech University",
-    period: "2015 - 2017",
-    description:
-      "Specialized in Web Technologies and Human-Computer Interaction. Thesis on optimizing user experience in progressive web applications.",
-    type: "education",
-  },
-  {
-    title: "Bachelor's in Computer Science",
-    company: "State University",
-    period: "2011 - 2015",
-    description: "Foundations in programming, algorithms, and software development. Minor in Digital Design.",
-    type: "education",
   },
 ]
 
@@ -46,7 +23,7 @@ function Experience() {
   return (
     <section id="experience" className="experience">
       <div className="container">
-        <h2>Experience & Education</h2>
+        <h2>Experience</h2>
 
         <div className="timeline">
           {experiences.map((exp, index) => (
@@ -68,7 +45,15 @@ function Experience() {
 
                 <div className="timeline-company">{exp.company}</div>
 
-                <p>{exp.description}</p>
+                {/* Description rendered as multiple points */}
+                <ul>
+                  {exp.description
+                    .trim()
+                    .split("\n")
+                    .map((point, idx) => (
+                      <li key={idx}>{point.replace(/^[-•]\s*/, '')}</li>
+                    ))}
+                </ul>
               </div>
             </div>
           ))}

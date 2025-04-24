@@ -42,15 +42,15 @@ function Footer() {
             <ul className="contact-info">
               <li>
                 <i className="icon-mail"></i>
-                <span>john.doe@example.com</span>
+                <span>shivankverma9838@gmail.com</span>
               </li>
               <li>
                 <i className="icon-phone"></i>
-                <span>+1 (555) 123-4567</span>
+                <span>+91 6393224187</span>
               </li>
               <li>
                 <i className="icon-map-pin"></i>
-                <span>San Francisco, CA</span>
+                <span>Munshipuliya, Lucknow</span>
               </li>
             </ul>
           </div>
@@ -65,15 +65,13 @@ function Footer() {
               <a href="#" aria-label="LinkedIn">
                 <i className="icon-linkedin"></i>
               </a>
-              <a href="#" aria-label="Twitter">
-                <i className="icon-twitter"></i>
-              </a>
+    
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} John Doe. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Shivank Verma. All rights reserved.</p>
         </div>
       </div>
     </footer>

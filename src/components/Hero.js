@@ -18,29 +18,35 @@ function Hero() {
               Hi, I'm <span className="highlight">Shivank Verma</span>
             </h1>
 
-            <h2>MERN Developer | React & JavaScript Enthusiast</h2>
+            <h2>MERN Stack Developer | React & JavaScript Enthusiast</h2>
 
-            <p>
-              I'm a passionate web developer with 6 months Internship experience creating beautiful, responsive, and
-              user-friendly websites. I specialize in modern JavaScript frameworks and have a keen eye for design and
-              user experience.
-            </p>
-
+            <ul className="hero-points">
+              <li>✅ Strong in <strong>MERN Stack</strong> – MongoDB, Express.js, React.js, Node.js</li>
+              <li>🚀 Built multiple <strong>full-stack projects</strong> with real-world use cases</li>
+              <li>🔁 <strong>API Integration expert</strong> – using Axios & React Query</li>
+              <li>🎨 Designed <strong>eye-catching UI/UX</strong> with Tailwind CSS, Bootstrap & custom CSS</li>
+              <li>⚛️ React proficiency – reusable components, state management with useContext & React Query</li>
+              <li>🔒 Implemented <strong>JWT-based authentication & authorization</strong></li>
+              <li>📦 Developed REST APIs, CRUD operations, and MongoDB schemas</li>
+              <li>📈 <strong>Performance optimized</strong> and mobile-first design approach</li>
+              <li>🧩 Clean, modular & maintainable codebase</li>
+              <li>🛠️ Version control with <strong>Git & GitHub</strong></li>
+              <li>🌱 Passionate about <strong>continuous learning</strong> & scalable design</li>
+            </ul>
+           
             {/* Social Links */}
             <div className="social-links">
-              <a href="#" aria-label="GitHub">
+              <a href="https://github.com/Shivank63" aria-label="GitHub">
                 <i className="icon-github"></i>
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/sv517/" aria-label="LinkedIn">
                 <i className="icon-linkedin"></i>
               </a>
-              <a href="#" aria-label="Twitter">
-                <i className="icon-twitter"></i>
-              </a>
             </div>
+            <p class="contact-text">
+  Contact No.: <span class="highlighted-number">6393224187</span>
+</p>
 
-            {/* CTA Button */}
-            <button className="cta-button">Contact Me</button>
           </div>
         </div>
       </div>
